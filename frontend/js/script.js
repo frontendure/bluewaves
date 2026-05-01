@@ -28,3 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
+
+// Close mobile navbar on click outside
+document.addEventListener('click', function (event) {
+  const navMenu = document.getElementById('navMenu');
+  const toggler = document.querySelector('.navbar-toggler');
+  if (navMenu && navMenu.classList.contains('show')) {
+    if (!navMenu.contains(event.target) && !toggler.contains(event.target)) {
+      if (typeof bootstrap !== 'undefined') {
+        const bsCollapse = bootstrap.Collapse.getInstance(navMenu) || new bootstrap.Collapse(navMenu, { toggle: false });
+        bsCollapse.hide();
+      } else {
+        navMenu.classList.remove('show');
+      }
+    }
+  }
+});

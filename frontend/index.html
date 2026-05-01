@@ -3,10 +3,21 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blue Waves | Premium Aquatic Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>Blue Waves | Premium Aquatic Center in Attingal, Trivandrum</title>
   <meta name="description"
-    content="Blue Waves is a premium aquatic center offering expert coaching, kids programs, and public swim access for all skill levels." />
+    content="Welcome to Blue Waves, Trivandrum's premier aquatic center located in Attingal. We offer expert swimming coaching, kids programs, Zumba sessions, and Yoga classes." />
+  <meta name="keywords"
+    content="swimming pool Attingal, Trivandrum swimming classes, aquatic center, kids swim lessons, Blue Waves, yoga Trivandrum, zumba classes" />
+  <meta property="og:title" content="Blue Waves | Premium Aquatic Center in Attingal" />
+  <meta property="og:description"
+    content="Join Blue Waves for expert swimming coaching, Zumba, and Yoga classes in Trivandrum." />
+  <meta property="og:type" content="website" />
+
+  <!-- Speed Optimizations -->
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" href="css/style.css" as="style">
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -40,9 +51,7 @@
             <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            <li class="nav-item ms-lg-3">
-              <a class="btn btn-brand" href="admin.html">Admin Login</a>
-            </li>
+
           </ul>
         </div>
       </div>
@@ -56,21 +65,41 @@
 
       <div class="container position-relative z-2">
         <div class="row align-items-center">
-          <div class="col-lg-8 animate-on-scroll is-visible">
+          <div class="col-lg-7 animate-on-scroll is-visible">
             <h1 class="hero-title">
               Dive into <br>
               <span class="italic-gold">Excellence</span> with Blue Waves.
             </h1>
 
-            <p class="hero-text mb-5">
+            <p class="hero-text mb-0 mb-lg-5 text-center text-lg-start d-none d-lg-block">
               Experience the pinnacle of aquatic wellness. A premium sanctuary designed for athletes, families, and
               individuals seeking unparalleled coaching and pristine facilities.
             </p>
 
-            <div class="d-flex gap-4 flex-wrap">
+            <!-- Mobile Logo Replacement -->
+            <div class="d-flex justify-content-center align-items-center d-lg-none mt-4 mb-3">
+              <div class="hero-logo-circle"
+                style="width: 170px; height: 170px; padding: 5px; flex: 0 0 170px; margin: 0; background: rgba(255, 255, 255, 0.4);">
+                <img src="assets/logo.png" alt="Blue Waves Logo" class="img-fluid">
+              </div>
+            </div>
+
+            <div class="d-none d-lg-flex gap-4 flex-wrap justify-content-start">
               <a href="programs.html" class="btn btn-primary-custom">Explore Programs</a>
               <a href="membership.html" class="btn btn-outline-light">Discover Membership</a>
             </div>
+          </div>
+          <div
+            class="col-lg-5 mt-4 mb-4 mt-lg-0 mb-lg-0 d-none d-lg-flex justify-content-center align-items-center animate-on-scroll delay-200 is-visible">
+            <div class="hero-logo-circle">
+              <img src="assets/logo.png" alt="Blue Waves Logo" class="img-fluid">
+            </div>
+          </div>
+          <div
+            class="col-12 mt-4 mb-2 pt-2 pb-2 d-flex gap-3 flex-column justify-content-center align-items-center d-lg-none animate-on-scroll delay-300 is-visible">
+            <a href="programs.html" class="btn btn-primary-custom w-100" style="max-width: 300px;">Explore Programs</a>
+            <a href="membership.html" class="btn btn-outline-light w-100" style="max-width: 300px;">Discover
+              Membership</a>
           </div>
         </div>
       </div>
@@ -118,33 +147,13 @@
       </div>
     </section>
 
-    <!-- PROGRAMS PREVIEW -->
-    <section class="section-space bg-soft">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-end mb-5 animate-on-scroll">
-          <div class="section-title mb-0">
-            <span>Curated Experiences</span>
-            <h2>Our Programs</h2>
-          </div>
-          <a href="programs.html" class="btn btn-outline-dark d-none d-md-inline-block">View All</a>
-        </div>
-
-        <div class="row g-4" id="homeProgramsGrid">
-          <div class="col-12 text-center text-muted">Loading programs...</div>
-        </div>
-        <div class="text-center mt-4 d-md-none animate-on-scroll">
-          <a href="programs.html" class="btn btn-outline-dark">View All</a>
-        </div>
-      </div>
-    </section>
-
     <!-- SCHEDULE BOARD -->
     <section class="section-space bg-dark">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-5 mb-5 mb-lg-0 animate-on-scroll">
             <div class="section-title text-white">
-              <span>Live Updates</span>
+              <span></span>
               <h2>Today's Sessions</h2>
               <p>Plan your visit. We maintain strict capacity limits to ensure a premium, uncrowded experience for all
                 our members.</p>
@@ -167,7 +176,7 @@
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-4">
-          <h4 class="footer-heading mb-4 text-white" style="font-size: 1.8rem; font-weight: 600;">BLUE WAVES</h4>
+          <img src="assets/logo.png" alt="Blue Waves Logo" class="site-logo-footer mb-4">
           <p class="footer-text mb-4">Redefining aquatic wellness with state-of-the-art facilities and elite coaching
             for the discerning swimmer.</p>
           <div class="social-icons">
@@ -195,10 +204,18 @@
 
         <div class="col-lg-3 col-md-4">
           <h5 class="footer-heading">Contact</h5>
-          <p class="footer-text mb-2"><i class="bi bi-geo-alt text-primary me-2"></i> 123 Aqua Boulevard, Marina Bay,
-            90210</p>
-          <p class="footer-text mb-2"><i class="bi bi-telephone text-primary me-2"></i> +1 (555) 123-4567</p>
-          <p class="footer-text"><i class="bi bi-envelope text-primary me-2"></i> concierge@bluewaves.com</p>
+          <p class="footer-text mb-2">
+            <i class="bi bi-geo-alt text-primary me-2"></i>
+            <a href="https://maps.app.goo.gl/wrqd2AQjrpPMctRj9" target="_blank" class="text-decoration-none"
+              style="color: inherit;">Pwd Rest House Road Tb Junction Attingal, Trivandrum 695101</a>
+          </p>
+          <p class="footer-text mb-2"><i class="bi bi-telephone text-primary me-2"></i> <a href="tel:+918090900914"
+              class="text-decoration-none" style="color: inherit;">+91 8090900914</a></p>
+          <p class="footer-text">
+            <i class="bi bi-envelope text-primary me-2"></i>
+            <a href="mailto:bluewavesattingal@gmail.com" class="text-decoration-none"
+              style="color: inherit;">bluewavesattingal@gmail.com</a>
+          </p>
         </div>
       </div>
 
@@ -208,79 +225,61 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/script.js" defer></script>
 
-  <script type="module">
-    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
-    import { SUPABASE_URL, SUPABASE_ANON_KEY } from './js/supabase-config.js';
-
-    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-    // Fetch Programs
-    async function fetchPrograms() {
-      const grid = document.getElementById('homeProgramsGrid');
-      try {
-        const { data, error } = await supabase.from('programs').select('*').order('order_val').limit(3);
-        grid.innerHTML = '';
-        if(error) throw error;
-        
-        if(!data || data.length === 0) {
-          grid.innerHTML = '<div class="col-12 text-center text-muted">No programs currently available.</div>';
-          return;
-        }
-        
-        data.forEach((item) => {
-          grid.innerHTML += `
-            <div class="col-md-4">
-              <div class="program-card animate-on-scroll is-visible">
-                <img src="${item.image}" alt="${item.title}">
-                <div class="program-card-content">
-                  <h5>${item.title}</h5>
-                  <p>${item.desc.substring(0, 80)}...</p>
-                </div>
-              </div>
-            </div>
-          `;
-        });
-      } catch (e) {
-        console.error(e);
-      }
-    }
-
-    // Fetch Slots
-    async function fetchSlots() {
+  <script>
+    function renderSchedule() {
       const board = document.getElementById('homeSlotsBoard');
-      try {
-        const { data, error } = await supabase.from('slots').select('*').order('order_val');
-        board.innerHTML = '';
-        if(error) throw error;
+      // Compute the current weekday strictly according to Indian Standard Time (IST)
+      const currentDayIST = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Kolkata', weekday: 'short' }).format(new Date());
 
-        if(!data || data.length === 0) {
-          board.innerHTML = '<div class="text-center text-white">No schedule uploaded for today.</div>';
-          return;
-        }
-        
-        data.forEach((item) => {
-          let statusClass = 'status-full';
-          if(item.status === 'Open') statusClass = 'status-open';
-          if(item.status === 'Few Slots') statusClass = 'status-few';
+      if (currentDayIST === 'Wed') {
+        board.innerHTML = `
+          <div class="text-center text-white p-4">
+            <i class="bi bi-calendar-x display-1 mb-3" style="color: var(--accent);"></i>
+            <h3 class="fw-bold mb-3">Holiday Today</h3>
+            <p class="text-white-50">Every Wednesday is a scheduled holiday for all Pool, Yoga, and Zumba sessions at Blue Waves.</p>
+          </div>
+        `;
+      } else {
+        board.innerHTML = `
+          <h4 class="mb-4 text-white" style="font-family: 'Playfair Display', serif;">Today's Available Timings</h4>
           
-          board.innerHTML += `
-            <div class="schedule-item">
-              <span class="schedule-time">${item.time}</span>
-              <span class="schedule-name">${item.name}</span>
-              <span class="status-badge ${statusClass}">${item.status}</span>
+          <div class="schedule-item mb-3 p-3 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-water text-primary fs-4 me-3"></i>
+              <h5 class="mb-0 text-white">Pool Sessions</h5>
             </div>
-          `;
-        });
-      } catch (e) {
-        console.error(e);
+            <div class="ms-5 text-white-50">6:00 AM - 10:30 PM <span class="badge bg-primary text-white ms-2">Open</span></div>
+          </div>
+
+          <div class="schedule-item mb-3 p-3 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-yin-yang text-info fs-4 me-3"></i>
+              <h5 class="mb-0 text-white">Yoga</h5>
+            </div>
+            <div class="ms-5 text-white-50">
+              Morning: 8:10 AM - 9:10 AM <br>
+              Evening: 6:45 PM - 7:45 PM
+            </div>
+          </div>
+
+          <div class="schedule-item p-3 rounded" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-music-note-beamed text-warning fs-4 me-3"></i>
+              <h5 class="mb-0 text-white">Zumba</h5>
+            </div>
+            <div class="ms-5 text-white-50">
+              Morning: 6:30 AM - 7:30 AM <br>
+              Evening: 8:30 PM - 9:30 PM
+            </div>
+          </div>
+        `;
       }
     }
 
-    fetchPrograms();
-    fetchSlots();
+    document.addEventListener('DOMContentLoaded', renderSchedule);
   </script>
 </body>
 

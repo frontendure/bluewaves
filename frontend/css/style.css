@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary: #00b4d8; /* Aquamarine */
+  --primary: #00b4d8;
+  /* Aquamarine */
   --primary-hover: #0096c7;
-  --accent: #d4af37; /* Champagne Gold */
+  --accent: #d4af37;
+  /* Champagne Gold */
   --accent-hover: #b5952f;
-  --dark-bg: #0b192c; /* Deep Navy */
+  --dark-bg: #0b192c;
+  /* Deep Navy */
   --darker-bg: #050b14;
   --soft-bg: #f8fbfb;
   --text-main: #1e293b;
@@ -21,14 +24,27 @@
   --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   color: var(--text-main);
-  overflow-x: hidden;
   background-color: var(--soft-bg);
 }
 
-h1, h2, h3, h4, h5, h6, .brand-text {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-text {
   font-family: 'Playfair Display', serif;
 }
 
@@ -53,6 +69,23 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   letter-spacing: 1px;
 }
 
+.site-logo {
+  height: 85px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.scrolled .site-logo {
+  height: 65px;
+}
+
+.site-logo-footer {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
 .nav-link {
   color: rgba(255, 255, 255, 0.8) !important;
   font-weight: 400;
@@ -75,11 +108,13 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   transform: translateX(-50%);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 80%;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--accent) !important;
 }
 
@@ -159,11 +194,11 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 }
 
 .hero-title {
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-size: clamp(2.5rem, 6vw, 6.5rem);
   font-weight: 600;
   line-height: 1.05;
   color: #fff;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .hero-title span.italic-gold {
@@ -177,6 +212,59 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.8;
   font-weight: 300;
+}
+
+.hero-logo-circle {
+  width: 380px;
+  height: 380px;
+  flex: 0 0 380px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+  .hero-logo-circle {
+    width: 130px;
+    height: 130px;
+    flex: 0 0 130px;
+    padding: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-collapse {
+    background: var(--nav-scrolled);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .hero-section {
+    text-align: center;
+    padding-top: 85px;
+    padding-bottom: 10px;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.hero-logo-circle img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* SECTIONS */
@@ -270,7 +358,6 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   overflow: hidden;
   height: 400px;
   background: var(--dark-bg);
-  group: hover;
 }
 
 .program-card img {
@@ -320,7 +407,7 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 /* SCHEDULE / PREMIUM INFO BOX */
 .premium-box {
   background: var(--darker-bg);
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 50px;
   position: relative;
 }
@@ -371,9 +458,22 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   font-weight: 500;
 }
 
-.status-open { background: rgba(0, 180, 216, 0.1); color: var(--primary); border: 1px solid rgba(0, 180, 216, 0.2); }
-.status-few { background: rgba(212, 175, 55, 0.1); color: var(--accent); border: 1px solid rgba(212, 175, 55, 0.2); }
-.status-full { background: rgba(255, 255, 255, 0.05); color: #888; }
+.status-open {
+  background: rgba(0, 180, 216, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+}
+
+.status-few {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.status-full {
+  background: rgba(255, 255, 255, 0.05);
+  color: #888;
+}
 
 /* PAGE HEADER */
 .page-header {
@@ -459,7 +559,7 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 .custom-form .form-control {
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0;
   padding: 15px 0;
   font-size: 1rem;
@@ -481,7 +581,7 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 }
 
 .dark-form .form-control {
-  border-bottom-color: rgba(255,255,255,0.2);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
   color: white;
 }
 
@@ -490,7 +590,7 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 }
 
 .dark-form label {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* ANIMATION CLASSES */
@@ -498,6 +598,7 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform, opacity;
 }
 
 .animate-on-scroll.is-visible {
@@ -505,7 +606,150 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   transform: translateY(0);
 }
 
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
-.delay-400 { transition-delay: 400ms; }
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-400 {
+  transition-delay: 400ms;
+}
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 767.98px) {
+
+  .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .container-fluid,
+  .container {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    overflow-x: hidden !important;
+  }
+
+  .custom-nav {
+    background: rgba(11, 25, 44, 0.98) !important;
+    padding: 16px 0 !important;
+  }
+
+  .custom-nav.scrolled {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(11, 25, 44, 0.98) !important;
+  }
+
+  /* Reduce excessive padding in sections */
+  .section-space {
+    padding: 40px 0;
+  }
+
+  .page-header {
+    padding: 100px 0 30px;
+  }
+
+  /* Reduce padding inside cards & containers to give more horizontal space to text */
+  .feature-card,
+  .premium-box {
+    padding: 25px !important;
+  }
+
+  .coaching-header {
+    background: transparent !important;
+    color: var(--accent) !important;
+    border: 1px solid var(--accent) !important;
+    border-radius: 0 !important;
+  }
+
+  /* Optimize Table and Lists for mobile */
+  .table td,
+  .table th {
+    padding: 14px 10px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .schedule-list li,
+  .premium-box .border-start .d-flex.justify-content-between {
+    padding-bottom: 12px !important;
+    margin-bottom: 12px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .schedule-list li span:first-child {
+    min-width: auto !important;
+    font-size: 0.8rem !important;
+  }
+
+  .schedule-list li .badge {
+    font-size: 0.7rem !important;
+    padding: 4px 8px !important;
+  }
+
+  /* Scale down massive font sizes */
+  .page-header h1,
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.2rem) !important;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .section-title p {
+    font-size: 0.95rem;
+  }
+
+  /* Make schedule items and lists smaller so they fit naturally without touching edges */
+  .schedule-item {
+    padding: 16px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .schedule-item .ms-5 {
+    margin-left: 0 !important;
+    padding-left: 36px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .schedule-item h5 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  .feature-card {
+    border-radius: 16px !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.02) !important;
+    text-align: left !important;
+  }
+
+  .feature-card i {
+    text-align: left !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Reduce footer padding */
+  .footer {
+    padding: 50px 0 30px;
+  }
+
+  /* Make small badges wrap correctly on phones if needed */
+  .badge {
+    white-space: normal;
+    text-align: center;
+  }
+}
