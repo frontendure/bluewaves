@@ -139,7 +139,7 @@
 
           <div class="col-lg-7 animate-on-scroll delay-200">
             <div class="bg-white p-5 shadow-sm border-top border-4 border-primary">
-              <form class="custom-form" action="https://formspree.io/f/xkoyneob" method="POST">
+              <form id="contactForm" class="custom-form" action="https://formspree.io/f/xkoyneob" method="POST">
                 <div class="row g-4">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -173,10 +173,19 @@
                     </div>
                   </div>
                   <div class="col-12 mt-5">
-                    <button type="submit" class="btn btn-brand w-100">Send Message</button>
+                    <button type="submit" id="submitBtn" class="btn btn-brand w-100">Send Message</button>
                   </div>
                 </div>
               </form>
+
+              <!-- Success Message (hidden by default) -->
+              <div id="formSuccess" style="display:none; text-align:center; padding: 2.5rem 1rem;">
+                <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"><i
+                    class="bi bi-check-circle-fill"></i></div>
+                <h4 style="font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Message Sent!</h4>
+                <p class="text-muted">Thank you for reaching out. We'll get back to you soon.</p>
+                <button class="btn btn-brand mt-3" onclick="resetContactForm()">Send Another</button>
+              </div>
             </div>
           </div>
         </div>
@@ -240,6 +249,48 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="js/script.js" defer></script>
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      const data = new FormData(contactForm);
+
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          contactForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+          alert('Something went wrong. Please try again.');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        alert('Network error. Please check your connection and try again.');
+      }
+    });
+
+    function resetContactForm() {
+      contactForm.reset();
+      contactForm.style.display = 'block';
+      formSuccess.style.display = 'none';
+      document.getElementById('submitBtn').disabled = false;
+      document.getElementById('submitBtn').textContent = 'Send Message';
+    }
+  </script>
 </body>
 
 </html>
