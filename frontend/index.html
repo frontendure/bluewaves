@@ -34,9 +34,9 @@
   <!-- NAVBAR -->
   <header>
     <nav class="navbar navbar-expand-lg fixed-top custom-nav" id="navbar">
-      <div class="container px-4 px-lg-5">
-        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-          <span class="brand-text">BLUE WAVES</span>
+      <div class="container-fluid px-3 px-lg-5">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/logo-dark-transp.PNG" alt="Blue Waves Logo" class="site-logo">
         </a>
 
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
@@ -66,82 +66,159 @@
 
       <div class="container position-relative z-2">
         <div class="row align-items-center">
-          <div class="col-lg-7 animate-on-scroll is-visible">
+          <div class="col-lg-6 mb-5 mb-lg-0 animate-on-scroll is-visible">
+            <span class="hero-subtitle">Premium Aquatic Club</span>
             <h1 class="hero-title">
-              Dive into <br>
-              <span class="italic-gold">Excellence</span> with Blue Waves.
+              DIVE INTO <br> EXCELLENCE
             </h1>
 
-            <p class="hero-text mb-0 mb-lg-5 text-center text-lg-start d-none d-lg-block">
-              Experience the pinnacle of aquatic wellness. A premium sanctuary designed for athletes, families, and
-              individuals seeking unparalleled coaching and pristine facilities.
+            <p class="hero-text mt-4 mb-5 d-none d-md-block">
+              From expert coaching to relaxing family swims, Blue Waves offers a refined aquatic experience built around
+              performance, wellness, and community.
             </p>
 
-            <!-- Mobile Logo Replacement -->
-            <div class="d-flex justify-content-center align-items-center d-lg-none mt-4 mb-3">
-              <div class="hero-logo-circle"
-                style="width: 170px; height: 170px; padding: 5px; flex: 0 0 170px; margin: 0; background: rgba(255, 255, 255, 0.4);">
-                <img src="assets/logo.png" alt="Blue Waves Logo" class="img-fluid">
-              </div>
-            </div>
-
-            <div class="d-none d-lg-flex gap-4 flex-wrap justify-content-start">
-              <a href="programs.html" class="btn btn-primary-custom">Explore Programs</a>
-              <a href="membership.html" class="btn btn-outline-light">Discover Membership</a>
+            <div class="d-flex gap-3 flex-column flex-sm-row align-items-sm-center mt-4">
+              <a href="programs.html" class="btn btn-modern-solid w-100 w-sm-auto text-center">Explore Programs</a>
+              <a href="membership.html" class="btn btn-modern-outline w-100 w-sm-auto text-center">Discover
+                Membership</a>
             </div>
           </div>
-          <div
-            class="col-lg-5 mt-4 mb-4 mt-lg-0 mb-lg-0 d-none d-lg-flex justify-content-center align-items-center animate-on-scroll delay-200 is-visible">
-            <div class="hero-logo-circle">
-              <img src="assets/logo.png" alt="Blue Waves Logo" class="img-fluid">
+          <div class="col-lg-6 animate-on-scroll delay-200 is-visible">
+            <div class="hero-image-container ms-lg-4">
+              <img src="assets/hero-optimized.jpg" alt="Blue Waves Premium Pool" class="hero-image-box">
             </div>
-          </div>
-          <div
-            class="col-12 mt-4 mb-2 pt-2 pb-2 d-flex gap-3 flex-column justify-content-center align-items-center d-lg-none animate-on-scroll delay-300 is-visible">
-            <a href="programs.html" class="btn btn-primary-custom w-100" style="max-width: 300px;">Explore Programs</a>
-            <a href="membership.html" class="btn btn-outline-light w-100" style="max-width: 300px;">Discover
-              Membership</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section class="section-space bg-white">
+    <!-- WHY CHOOSE US (Overlapping Cards) -->
+    <section class="position-relative" style="margin-top: -80px; z-index: 10;">
       <div class="container">
-        <div class="section-title text-center animate-on-scroll">
-          <span>The Blue Waves Standard</span>
-          <h2>Excellence in Every Drop</h2>
-          <p>We believe swimming is more than a sport; it is an art of living. Our facilities and staff are dedicated to
-            providing a world-class aquatic experience.</p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="feature-card shadow-lg animate-on-scroll text-center h-100" style="border: none;">
+              <i class="bi bi-water mb-3"></i>
+              <h5 class="fw-bold mb-3">Swimming Pool</h5>
+              <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.7;">Dive into our state-of-the-art pool with expert coaching for all ages and skill levels — from beginners to competitive swimmers.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="feature-card shadow-lg animate-on-scroll delay-100 text-center h-100" style="border: none;">
+              <i class="bi bi-balloon-heart mb-3"></i>
+              <h5 class="fw-bold mb-3">Yoga</h5>
+              <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.7;">Find your balance with guided yoga sessions designed to improve flexibility, strength, and mental well-being in a peaceful setting.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="feature-card shadow-lg animate-on-scroll delay-200 text-center h-100" style="border: none;">
+              <i class="bi bi-music-note-beamed mb-3"></i>
+              <h5 class="fw-bold mb-3">Zumba</h5>
+              <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.7;">Get moving with high-energy Zumba classes that combine dance, music, and fitness into a fun, calorie-burning workout for everyone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY BLUE WAVES -->
+    <section class="section-space" style="background-color: var(--darker-bg);">
+      <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+          <h2 class="display-5 fw-semibold" style="color: var(--text-light);">Why
+            Blue Waves?</h2>
+          <div style="width: 80px; height: 2px; background-color: var(--accent); margin: 20px auto;"></div>
         </div>
 
-        <div class="row g-5 mt-4">
-          <div class="col-md-4">
-            <div class="feature-card animate-on-scroll delay-100 text-center">
-              <i class="bi bi-award"></i>
-              <h5>Elite Coaching</h5>
-              <p>Train under the guidance of certified professionals who understand the nuances of technique and
-                endurance.</p>
+        <div class="row mb-5 animate-on-scroll delay-100">
+          <div class="col-md-6 mb-4 mb-md-0 px-md-4">
+            <p class="text-muted" style="line-height: 1.8; font-size: 1.05rem;">
+              Blue Waves is a premium facility designed to provide a high-performance aquatic program. Our center
+              features a state-of-the-art racing pool, a dedicated warm-up pool, and a safe toddler pool, ensuring a
+              comprehensive swimming experience for all ages and skill levels.
+            </p>
+          </div>
+          <div class="col-md-6 px-md-4 border-start border-2 border-light d-none d-md-block">
+            <p class="text-muted" style="line-height: 1.8; font-size: 1.05rem;">
+              The amalgamation of premium infrastructure, superior coaching, and modern techniques makes Blue Waves your
+              one-stop destination to learn swimming and imbibe it as a culture in your daily routine. We strive to
+              establish ourselves as a premier aquatic centre of excellence.
+            </p>
+          </div>
+          <div class="col-md-6 px-md-4 d-block d-md-none">
+            <p class="text-muted" style="line-height: 1.8; font-size: 1.05rem;">
+              The amalgamation of premium infrastructure, superior coaching, and modern techniques makes Blue Waves your
+              one-stop destination to learn swimming and imbibe it as a culture in your daily routine. We strive to
+              establish ourselves as a premier aquatic centre of excellence.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 mt-2 text-center justify-content-center animate-on-scroll delay-200">
+          <div class="col">
+            <div class="p-3 hover-lift">
+              <i class="bi bi-droplet-half text-primary mb-3 d-block"
+                style="font-size: 2.5rem; text-shadow: 0 0 10px rgba(0,180,216,0.3);"></i>
+              <h6 class="fw-semibold text-light">Crystal Clear<br>Water</h6>
             </div>
           </div>
-
-          <div class="col-md-4">
-            <div class="col-md-12 h-100">
-              <div class="feature-card animate-on-scroll delay-200 text-center">
-                <i class="bi bi-droplet-half"></i>
-                <h5>Pristine Waters</h5>
-                <p>Our state-of-the-art filtration systems ensure crystal clear, perfectly heated water for your
-                  ultimate comfort.</p>
-              </div>
+          <div class="col">
+            <div class="p-3 hover-lift">
+              <i class="bi bi-clipboard2-pulse text-primary mb-3 d-block"
+                style="font-size: 2.5rem; text-shadow: 0 0 10px rgba(0,180,216,0.3);"></i>
+              <h6 class="fw-semibold text-light">Water Testing<br>Lab</h6>
             </div>
           </div>
-
-          <div class="col-md-4">
-            <div class="feature-card animate-on-scroll delay-300 text-center">
-              <i class="bi bi-shield-check"></i>
-              <h5>Exclusive Sanctuary</h5>
-              <p>Enjoy a serene, uncrowded environment tailored for focused training and tranquil relaxation.</p>
+          <div class="col">
+            <div class="p-3 hover-lift">
+              <i class="bi bi-door-closed text-primary mb-3 d-block"
+                style="font-size: 2.5rem; text-shadow: 0 0 10px rgba(0,180,216,0.3);"></i>
+              <h6 class="fw-semibold text-light">Hygienic<br>Changing Room</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 hover-lift">
+              <i class="bi bi-arrows-angle-expand text-primary mb-3 d-block"
+                style="font-size: 2.5rem; text-shadow: 0 0 10px rgba(0,180,216,0.3);"></i>
+              <h6 class="fw-semibold text-light">Large Deck<br>Area</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 hover-lift">
+              <i class="bi bi-safe text-primary mb-3 d-block"
+                style="font-size: 2.5rem; text-shadow: 0 0 10px rgba(0,180,216,0.3);"></i>
+              <h6 class="fw-semibold text-light">Locker<br>Facility</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 hover-lift">
+              <i class="bi bi-cloud-rain text-primary mb-3 d-block"
+                style="font-size: 2.5rem; text-shadow: 0 0 10px rgba(0,180,216,0.3);"></i>
+              <h6 class="fw-semibold text-light">Ample Open<br>Shower Facility</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 hover-lift">
+              <i class="bi bi-bandaid text-primary mb-3 d-block"
+                style="font-size: 2.5rem; text-shadow: 0 0 10px rgba(0,180,216,0.3);"></i>
+              <h6 class="fw-semibold text-light">First Aid<br>Available</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 hover-lift">
+              <i class="bi bi-people text-primary mb-3 d-block"
+                style="font-size: 2.5rem; text-shadow: 0 0 10px rgba(0,180,216,0.3);"></i>
+              <h6 class="fw-semibold text-light">Spectator<br>Gallery</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 hover-lift">
+              <i class="bi bi-p-circle text-primary mb-3 d-block"
+                style="font-size: 2.5rem; text-shadow: 0 0 10px rgba(0,180,216,0.3);"></i>
+              <h6 class="fw-semibold text-light">Ample Parking<br>Facility</h6>
             </div>
           </div>
         </div>
@@ -177,7 +254,7 @@
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-4">
-          <img src="assets/logo.png" alt="Blue Waves Logo" class="site-logo-footer mb-4">
+          <img src="assets/logo-dark-transp.PNG" alt="Blue Waves Logo" class="site-logo-footer mb-4">
           <p class="footer-text mb-4">Redefining aquatic wellness with state-of-the-art facilities and elite coaching
             for the discerning swimmer.</p>
           <div class="social-icons">

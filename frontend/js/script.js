@@ -1,8 +1,21 @@
 // js/script.js
+let lastScrollY = window.scrollY;
+
 window.addEventListener("scroll", () => {
   const nav = document.getElementById("navbar");
   if (nav) {
+    // Add scrolled class for padding/shadow changes
     nav.classList.toggle("scrolled", window.scrollY > 50);
+
+    // Hide/Show based on scroll direction
+    if (window.scrollY > lastScrollY && window.scrollY > 100) {
+      // Scrolling down
+      nav.classList.add("nav-hidden");
+    } else {
+      // Scrolling up
+      nav.classList.remove("nav-hidden");
+    }
+    lastScrollY = window.scrollY;
   }
 });
 
