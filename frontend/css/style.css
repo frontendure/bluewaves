@@ -180,7 +180,7 @@ h6,
   min-height: 100vh;
   background:
     linear-gradient(rgba(11, 25, 44, 0.7), rgba(5, 11, 20, 0.9)),
-    url('../assets/hero.jpg') center/cover no-repeat fixed;
+    url('../assets/hero-optimized.jpg') center/cover no-repeat fixed;
   position: relative;
   display: flex;
   align-items: center;
